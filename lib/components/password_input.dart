@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:murukkugedara/utils/color_utils.dart';
 
-class InputText extends StatefulWidget {
-  const InputText({super.key,required this.hintText,required this.prefixIcon});
+class PasswordInput extends StatefulWidget {
+  const PasswordInput({super.key,required this.hintText,required this.prefixIcon});
   
   final IconData prefixIcon;
   final String hintText;
 
   @override
-  State<InputText> createState() => _InputTextState();
+  State<PasswordInput> createState() => _PasswordInputState();
 }
 
-class _InputTextState extends State<InputText> {
+class _PasswordInputState extends State<PasswordInput> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -44,7 +44,15 @@ class _InputTextState extends State<InputText> {
                 ),
               ),
             ),
-          ],
+             Positioned(
+              right:15,
+              top:8,
+              child: IconButton(
+                onPressed: (){
+                  
+                },
+                icon:Icon(widget.prefixIcon,color: const Color.fromARGB(255, 6, 6, 6),))),
+         ],
         ),
         decoration:BoxDecoration(
           borderRadius: BorderRadius.circular(10),
