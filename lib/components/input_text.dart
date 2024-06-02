@@ -27,7 +27,8 @@ class _InputTextState extends State<InputText> {
             Positioned(
               left:22,
               top:18,
-              child: Icon(widget.prefixIcon,color: ColorUtils.primary,)),
+              child:Icon(widget.prefixIcon,color: ColorUtils.primary,)
+              ),
             Positioned(
               left:71,
               top:2,

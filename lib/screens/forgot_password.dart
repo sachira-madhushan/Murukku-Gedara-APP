@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -6,21 +5,20 @@ import 'package:murukkugedara/components/input_text.dart';
 import 'package:murukkugedara/components/password_input.dart';
 import 'package:murukkugedara/components/primary_button.dart';
 import 'package:murukkugedara/components/title_text.dart';
-import 'package:murukkugedara/screens/forgot_password.dart';
 import 'package:murukkugedara/screens/home_screen.dart';
 import 'package:murukkugedara/screens/registration_screen.dart';
 import 'package:murukkugedara/utils/color_utils.dart';
 import 'package:murukkugedara/utils/image_utils.dart';
 import 'package:murukkugedara/utils/navigate_utils.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class ForgotPassword extends StatefulWidget {
+  const ForgotPassword({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<ForgotPassword> createState() => _ForgotPasswordState();
 }
 
-class _LoginState extends State<Login> {
+class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,7 +26,7 @@ class _LoginState extends State<Login> {
         body:Stack(
           children: [
             Positioned(
-            top:70,
+            top:120,
             left:50,
             right:50,
             child:ImageUtils.pngImage("logoRed.png")),
@@ -40,28 +38,15 @@ class _LoginState extends State<Login> {
                 child: Column(
                   children:[
                     SizedBox(height:37,),
-                    TitleText(text:"Login"),
+                    TitleText(text:"Forgot Password"),
                     SizedBox(height:35,),
                     InputText(hintText: "Email", prefixIcon:Icons.email),
-                    PasswordInput(hintText: "Password", prefixIcon:Icons.lock,sufixIcon: Icons.visibility,),
-                    GestureDetector(onTap: (){
-                      NavigateUtils.navigateTo(context,ForgotPassword());
-                    }, child: Text("Forgot Password?",style:TextStyle(color: Colors.white),)),
                     SizedBox(height:10,),
-                    PrimaryButton(context: context,text: "Login",route:Home()),
-                    SizedBox(height:7,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("Don’t have an account?",style:TextStyle(color: Colors.white),),
-                      GestureDetector(child: Text(" Create account",style:TextStyle(color: Colors.white)),onTap: (){
-                    NavigateUtils.navigateToAndRemove(context,Register());
-                  },)
-                    ],
-                  )
+                    PrimaryButton(context: context,text: "Send Password Reset Email",route:Home()),
+                    
                   ],
                 ),
-                height:430,
+                height:320,
                 decoration:BoxDecoration(
                   color:ColorUtils.primary,
                   borderRadius: BorderRadiusDirectional.only(topStart:Radius.circular(35),topEnd:Radius.circular(35))

@@ -4,11 +4,11 @@ import 'package:flutter/widgets.dart';
 import 'package:murukkugedara/utils/color_utils.dart';
 
 class PasswordInput extends StatefulWidget {
-  const PasswordInput({super.key,required this.hintText,required this.prefixIcon});
+  const PasswordInput({super.key,required this.hintText,required this.prefixIcon,required this.sufixIcon});
   
   final IconData prefixIcon;
   final String hintText;
-
+  final IconData sufixIcon;
   @override
   State<PasswordInput> createState() => _PasswordInputState();
 }
@@ -51,7 +51,7 @@ class _PasswordInputState extends State<PasswordInput> {
                 onPressed: (){
                   
                 },
-                icon:Icon(widget.prefixIcon,color: const Color.fromARGB(255, 6, 6, 6),))),
+                icon:Icon(widget.sufixIcon,color: const Color.fromARGB(255, 6, 6, 6),))),
          ],
         ),
         decoration:BoxDecoration(
