@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:murukkugedara/screens/contact_screen.dart';
 import 'package:murukkugedara/screens/home_screen.dart';
 import 'package:murukkugedara/utils/color_utils.dart';
 
@@ -12,7 +13,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int index=0;
 
-  List<Widget> screenList=[Home(),];
+  List<Widget> screenList=[Home(),Contact()];
 
   @override
   Widget build(BuildContext context) {
