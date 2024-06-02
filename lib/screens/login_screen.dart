@@ -8,6 +8,7 @@ import 'package:murukkugedara/components/primary_button.dart';
 import 'package:murukkugedara/components/title_text.dart';
 import 'package:murukkugedara/screens/forgot_password.dart';
 import 'package:murukkugedara/screens/home_screen.dart';
+import 'package:murukkugedara/screens/main_screen.dart';
 import 'package:murukkugedara/screens/registration_screen.dart';
 import 'package:murukkugedara/utils/color_utils.dart';
 import 'package:murukkugedara/utils/image_utils.dart';
@@ -48,7 +49,7 @@ class _LoginState extends State<Login> {
                       NavigateUtils.navigateTo(context,ForgotPassword());
                     }, child: Text("Forgot Password?",style:TextStyle(color: Colors.white),)),
                     SizedBox(height:10,),
-                    PrimaryButton(context: context,text: "Login",route:Home()),
+                    PrimaryButton(context: context,text: "Login",route:MainScreen()),
                     SizedBox(height:7,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,

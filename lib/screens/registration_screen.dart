@@ -5,6 +5,7 @@ import 'package:murukkugedara/components/primary_button.dart';
 import 'package:murukkugedara/components/title_text.dart';
 import 'package:murukkugedara/screens/home_screen.dart';
 import 'package:murukkugedara/screens/login_screen.dart';
+import 'package:murukkugedara/screens/main_screen.dart';
 import 'package:murukkugedara/utils/color_utils.dart';
 import 'package:murukkugedara/utils/image_utils.dart';
 import 'package:murukkugedara/utils/navigate_utils.dart';
@@ -36,7 +37,7 @@ class _RegisterState extends State<Register> {
                   PasswordInput(hintText: "Password", prefixIcon:Icons.lock,sufixIcon: Icons.visibility,),
                   PasswordInput(hintText: "Confirm Password", prefixIcon:Icons.lock,sufixIcon: Icons.visibility,),
                   SizedBox(height:10,),
-                  PrimaryButton(context: context,text: "Register",route:Home()),
+                  PrimaryButton(context: context,text: "Register",route:MainScreen()),
                   SizedBox(height:7,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
